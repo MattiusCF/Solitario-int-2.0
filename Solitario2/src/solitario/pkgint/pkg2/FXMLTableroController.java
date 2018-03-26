@@ -103,7 +103,7 @@ public class FXMLTableroController implements Initializable {
         selecModo.getItems().addAll("Clásico", "Personalizado");
     }    
     public void click(){
-        btn13.setStyle("-fx-background-color: blue");
+        btn15.setStyle("-fx-background-image: url('file:/C:/Users/Asus/Desktop/Kraken/Solitario2/src/solitario/pkgint/IMG/CFondo.png');");
     }
     
 }
