@@ -5,16 +5,19 @@
  */
 package solitario.pkgint.pkg2;
 
+import static java.awt.Color.blue;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
 
 
 /**
@@ -95,10 +98,12 @@ public class FXMLTableroController implements Initializable {
     private ComboBox selecModo;
     @FXML
     private Button Acción;
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         selecModo.getItems().addAll("Clásico", "Personalizado");
     }    
+    public void click(){
+        btn13.setStyle("-fx-background-color: blue");
+    }
     
 }
