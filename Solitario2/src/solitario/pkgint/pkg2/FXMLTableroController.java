@@ -114,23 +114,50 @@ public class FXMLTableroController implements Initializable {
         
         
         
-    }    
-    public void click(){
+    }
+    public void selec(){
         String x="Clásico";
+        if(selecModo.getValue().toString().equals(x)){
+            for(int i=1;i<=7;i++){
+                for(int j=1;j<=7;j++){
+                    if((i<3 && j<3) || (i<3 && j>5) || (i>5 && j<3) || (i>5 && j>5)){
+                        btns[i][j]=null;
+                    }else{
+                        btns[i][j].setStyle("-fx-background-image: url('file:src/solitario/pkgint/IMG/CFondo.png')");
+                    }
+                }
+            }
+            btns[4][4].setStyle("-fx-background-image: url('file:src/solitario/pkgint/IMG/SFondo.png')");
+            //btns[4][4]=null;
+        }else{
+            for(int i=1;i<=7;i++){
+                for(int j=1;j<=7;j++){
+                    if((i<3 && j<3) || (i<3 && j>5) || (i>5 && j<3) || (i>5 && j>5)){
+                        btns[i][j]=null;
+                    }else{
+                        btns[i][j].setStyle("-fx-background-image: url('file:src/solitario/pkgint/IMG/SFondo.png')");
+                    }
+                }
+            }
+        }
+    }
+    public void click(){
+        /*String x="Clásico";
         if(selecModo.getValue().toString().equals(x)){//Se activa con la opción de juego Clásica
             System.out.println("Sisas, si da");
         }else{//Debe tener el código para la solución en personalizado
+            System.out.println("Sisas");
             Acción.setOnAction(this::intento);//ésto es una prueba para ver si puedo cambiar la acción que cumple este boton para una idea que tengo, no mover! -_-
         }
-        //for(int i=1;i<=7;i++){
-          //  for(int j=1;j<=7;j++){
-            //    if((i<3 && j<3) || (i<3 && j>5) || (i>5 && j<3) || (i>5 && j>5)){
-              //      btns[i][j]=null;
-                //}else{
-                  //  btns[i][j].setStyle("-fx-background-image: url('file:/C:/Users/Asus/Desktop/Kraken/Solitario2/src/solitario/pkgint/IMG/SFondo.png');");
-                //}
-            //}
-        //}
+        for(int i=1;i<=7;i++){
+            for(int j=1;j<=7;j++){
+                if((i<3 && j<3) || (i<3 && j>5) || (i>5 && j<3) || (i>5 && j>5)){
+                    btns[i][j]=null;
+                }else{
+                    btns[i][j].setStyle("-fx-background-image: url('file:/C:/Users/Asus/Desktop/Kraken/Solitario2/src/solitario/pkgint/IMG/SFondo.png');");
+                }
+            }
+        }*/
     }
     public void intento(ActionEvent event){
         System.out.println("Que sisas mi pez");
