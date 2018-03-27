@@ -55,7 +55,7 @@
             <Font name="Times New Roman" size="23.0" />
          </font>
       </Label>
-      <Button fx:id="Acción" layoutX="438.0" layoutY="374.0" mnemonicParsing="false" text="Iniciar" />
+      <Button fx:id="Acción" layoutX="438.0" layoutY="374.0" mnemonicParsing="false" onAction="#click" text="Iniciar" />
       <TextArea fx:id="textoSol" editable="false" layoutX="362.0" layoutY="59.0" prefHeight="281.0" prefWidth="123.0">
          <font>
             <Font name="Times New Roman" size="12.0" />
